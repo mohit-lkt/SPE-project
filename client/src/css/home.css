@@ -1,0 +1,174 @@
+
+* {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+}
+.wrapper {
+	width: 1170px;
+	margin: auto;
+}
+header {
+	/* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://i.postimg.cc/YjcJg24M/aa.jpg); */
+	/* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(VgbETHqaagWDL1lVkjGdgInwSZ9Ri7W2A96rHWEhTiNiORJIAKBididTsV4uCZq/NOjeNlwySJnmD5+1Uv0L54+YdFpA8Z+4rUzFGBnsfFZ3fGGGkgImmZAkQoU+EC3NWOiqmtsyQNQXm5N9iZqjB6e4xEQldH5iL2HFG9VfKuhw2A2gGLj0rV7AxL1/L4aYTY6FcXEZlEGTAiLCfIfSl3TumY2IfmDQby0zzuDWgy6ZZECgzAiTekHVlxJC5d2E73tTKXsDQx6P8AFuZXNIjsWRSEKqIQLtYeXevomb+J8thMqs4ljxsCbya+R9BD4LsHGpz+arPiPIsynFLedNaYKPtWTzyYhbQQQpAkbXE0Wa+U/wClGexnDqCNAN+80Z8YdVz2A7uLpEADjzoNGNX134bwscEgBX7jn1rBdW+Gsxg3uV7rQnwz/qBihwuK2pZ54r61ks9h46BlIINBxTAfFNOJ/vP1Ne19fzHw3l3YsUEmuqfD9htnwjK5NwAvFaTIZQgV4xUDaqRno5rgdvsnJBebfSKVrnoao53N6qVM16hKOyUka7K5t2I0ya0CYrBdyDWW6FmgtiN+a0uZzSBJmu34sqWysOgbExQd6X5hq9fEBMg0HjZkA71x/KwNz5RGkA5jH0tNaPBxUODOoTFZrMZI4gsahleh4i/nYiunBhqP2DGIRhkaj60zwV1MCp0mo5XpoG4mi0y3YVzS+PNSuJuDRq+kqoSGCk8mqcx0PUS4aF7UgXPOgr0/Erxpm1duOWvt2WSZdj5L5ZBXxFuBUv6zEw9lI9aryvVfEGO4pvg59MQ+OB2qsakZ2gDK9XcuBrAm8HY0d1bqmJoZSiAWMgXsZ/ag+oLgriKxAgVPqGeRlhRxT9LbF8iNOrQ6uQGYd71bn+sPjPr0AEADwjgVnsXLPrJWwnatLkMsQolqVNexqYK/VnIgopI8r1WnVCD+BZPlT5MDDVgzAGvcZcBm1aQDT69gtibGzrG/yxFB43xFoBVUnyFO8Z1uBEV5lMrgqpMDUe9ZV7FZV8LZpMZScQhI4mCaPz2WwXOjCA//AKrPZnpYZywaB5U1y6LggQZNG0ZWEYPw3AJdqHw+mgT9jXP1lyYAmqsXN4ouVoWGijqXSIBYMZoTF6S+Lh6dRivX6u7HSRQ2J191YKiGnixZDD4exf8AxqOxE6qUfEH+orYylNG9q86qj4qFnMDtWJy2CPnBTtNM2ChsOkOU+Yo86J6X8U4+WNmIjjit5hDDXLKLbVheu5RGkrWeujG86f8A6s4OgfMU6ua6vi2JlGmuoWajbNmyaCxCe9dXVw5FoSREGrEWurq45dEpB+A8VT1DqLRFdXVb4z0ykRdlepuDE2ojGxmN5rq6qS7MyWB1J0iDW96Dj/MUFhXV1dGLoeI3XAXVtTHCyqxtXV1VRQT9ZySmkL9NUXrq6pyQyAs1iBdhS/F6kyiRXV1Iu0FlmVTFzMeMLFaBOlOFu811dVZLQqFWbUqd65c0wG5rq6prsZl64rN+Y1xDTGqvK6naFKcXEYGJqtywE6q6uoUA7CxGNyaZ4OLNq6up4ow1yGAoMxRpwg8zXV1Ywpy3TE17c0X1zpeGmGSqgGN66uox6AfKOsdccStZ1MydWrmva6mQBq3XMXSF1WoH/wAm5IBNe11byEZpi+VdXV1Ax//Z); */
+	background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(https://i.postimg.cc/YjcJg24M/aa.jpg);
+	height: 100vh;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+}
+.nav-area {
+	float: right;
+	list-style: none;
+	margin-top: 30px;
+}
+.nav-area li {
+	display: inline-block;
+}
+.nav-area li a {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px 20px;
+	font-family: poppins;
+	font-size: 16px;
+	text-transform: uppercase;
+}
+.nav-area li a:hover {
+	background: #fff;
+	color: #333;
+}
+.logo {
+	float: left;
+}
+.logo img {
+	width: 100%;
+	padding: 15px 0;
+}
+.welcome-text {
+	position: absolute;
+	width: 600px;
+	height: 300px;
+	margin: 20% 30%;
+	text-align: center;
+}
+.welcome-text h1 {
+	text-align: center;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 60px;
+}
+.welcome-text h1 span {
+	color: #00fecb;
+}
+.welcome-text a {
+	border: 1px solid #fff;
+	padding: 10px 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
+	margin-top: 20px;
+	display: inline-block;
+	color: #fff;
+}
+.welcome-text a:hover {
+	background: #fff;
+	color: #333;
+}
+/*resposive*/
+
+@media (max-width:600px) {
+	.wrapper {
+		width: 100%;
+	}
+	.logo {
+		float: none;
+		width: 50%;
+		text-align: center;
+		margin: auto;
+	}
+	/* img {
+		width: ;
+	} */
+	.nav-area {
+		float: none;
+		margin-top: 0;
+	}
+	.nav-area li a {
+		padding: 5px;
+		font-size: 11px;
+	}
+	.nav-area {
+		text-align: center;
+	}
+	.welcome-text {
+		width: 100%;
+		height: auto;
+		margin: 30% 0;
+	}
+	.welcome-text h1 {
+		font-size: 30px;
+	}
+}
+
+
+
+
+   
+   /* Search Bar */
+
+   .search-box {
+    position: absolute;
+    /*top: 50%;*/
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #f0f2f5;
+    height: 40px;
+    border-radius: 40px;
+    padding: 10px;
+   }
+   
+   .search-box:hover > .search-txt {
+    width: 240px;
+    padding: 0 6px;
+   }
+   
+   .search-boxa:hover > .search-btn {
+    background: white;
+    color: black;
+   }
+   
+   .search-btn {
+    color: #e84118;
+    float: right;
+    width: 40px;
+    height: 25px;
+    border-radius: 40px;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    color: white;
+    cursor: pointer;
+   }
+   
+   .search-btn > i {
+    font-size: 30px;
+   }
+   
+   .search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+    font-weight: bold;
+   }
