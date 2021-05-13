@@ -20,17 +20,11 @@ function Home(props) {
 
         <>
             <header>
-                <div className="wrapper">
-                    <div className="logo">
-                        <img src="https://i.postimg.cc/mg4rWBmv/logo.png" alt="" />
-                    </div>
-                </div>
-                
                 <React.Fragment>
                 <div className="welcome-text">
                     <h1>
-                        We are <span>Creative</span></h1>
-                    <a href="/Contact">Contact Us</a>
+                        Let's <span>Fuel Up</span> !</h1>
+                    <a href="/Contact">Create Event</a>
                 </div>
 
                 

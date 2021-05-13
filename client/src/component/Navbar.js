@@ -25,11 +25,9 @@ const Navbar = () => {
 
   <div className="collapse navbar-collapse" id="navbarSupportedContent">
     <ul className="navbar-nav ml-auto">
-      <li className="nav-item active">
-        <NavLink className="nav-link" to={isLoggedIn ? '/add-skill' : '/login'}>Register as vendor <span className="sr-only">(current)</span></NavLink>
-      </li>
+      
       <li className="nav-item">
-        <NavLink className="nav-link" to="/login">login</NavLink>
+        <NavLink className="nav-link" to="/login">Login</NavLink>
       </li>
       <li className="nav-item">
         <NavLink className="nav-link" to="/Signup">Signup</NavLink>
