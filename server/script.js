@@ -2,10 +2,11 @@ const express = require("express");
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
+const db = require('./database.js');
 const usersRoute = require('./routes/users');
 const authRoute = require('./routes/auth');
+const eventRoute = require('./routes/event');
 const passport = require('passport');
-const local = require('./strategies/local');
 const store = new session.MemoryStore();
 const cors  = require('cors');
 
@@ -27,6 +28,14 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.urlencoded({
     extended:false
 }));
+
+db.connect(function (err) {
+    if(err){
+        console.log("error");
+    }else{
+        console.log("connected to MySQL");
+    }
+});
 app.use(session({
     key:"userID",
     secret:"password",
@@ -45,22 +54,11 @@ app.use(passport.initialize());
 app.use(passport.session());
 app.use('/users',usersRoute);
 app.use('/auth',authRoute);
+app.use('/event',eventRoute);
 
-
-
-// const users = [{name:'Mohit',age:22}];
-// app.get('/',(req,res)=>{
-//     res.send({
-//         msg:'Hey Fitness Fuel',
-//         user:{}
-//     });
-// });
-// app.get('/users',(req,res)=>{
-//     res.send(users);
-// });
-// app.get('/users',(req,res)=>{
-//     res.send(users);
-// });
+require('dotenv').config()
 app.listen(3001,() => {
     console.log("running server on 3001");
 });
+
+module.exports = app;

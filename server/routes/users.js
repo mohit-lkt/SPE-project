@@ -11,11 +11,15 @@ router.use((req,res,next)=>{
 });
 
 router.get('/',async (req,res)=>{
-    if(req.user){
-        console.log(req.user);
+    console.log("%%%%%%%%%");
+    console.log(req);
+    if(req.session.user){
+        console.log("4444444444");
+        console.log(req.session.user);
         const results = await db.promise().query(`SELECT * FROM users`);
         res.status(200).send(results[0]);
     }else{
+        console.log("5555555555");
         res.status(403).send({msg: 'Not Authenticated'});
     }
     

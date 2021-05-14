@@ -25,7 +25,7 @@ router.post('/login',async (req,res)=>{
     console.log("*****");
     try{
         const result = await db.promise().query(`SELECT * FROM users WHERE username = '${username}'`);
-        console.log(result[0][0].password);
+        //console.log(result[0][0].password);
         if(result[0].length===0){
             console.log("user not found");
             //done(null,false);
@@ -37,6 +37,13 @@ router.post('/login',async (req,res)=>{
                 req.session.user = result[0];
                 console.log(req.session.user[0]);
                 console.log("success");
+                //console.log(res.body);
+                // var out = '';
+                // for (var p in res) {
+                // out += p + ': ' + res[p] + '\n';
+                // }
+                // console.log(out);
+                res.send({data:req.session.user[0],message: "OK" , statusType:"success"});
                 //done(null,password);
             }else{
                 console.log("failed!!")
