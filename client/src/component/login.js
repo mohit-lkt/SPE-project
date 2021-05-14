@@ -1,9 +1,12 @@
+
 import React, { useState } from 'react'
 import { NavLink,useHistory } from 'react-router-dom'
 import { useDispatch} from 'react-redux'
 import { saveToken } from './../redux/home'
 import "../css/signup.css";
-
+require('dotenv').config()
+const baseurl = process.env.REACT_APP_BASE_URL;
+console.log(baseurl);
 function Login() {
     const [username,setuserName] = useState("");
     const [password,setPassword] = useState("");
@@ -23,7 +26,7 @@ function Login() {
              },
             body: JSON.stringify(data)
           };
-          fetch('http://localhost:3001/auth/login', requestOptions)
+          fetch( baseurl + '/auth/login', requestOptions)
           .then(response => {
             console.log(response.body);
             if(response.status !== 200 ) {

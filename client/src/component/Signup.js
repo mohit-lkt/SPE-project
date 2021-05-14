@@ -1,7 +1,9 @@
+
 import React , { useState } from 'react'
 import { NavLink ,useHistory} from 'react-router-dom'
 import "../css/signup.css";
-
+require('dotenv').config()
+const baseurl = process.env.BASE_URL;
 
 
 
@@ -28,7 +30,7 @@ function Signup() {
                    },
                   body: JSON.stringify(data)
                 };
-                fetch('http://localhost:3001/users', requestOptions)
+                fetch(baseurl+'/users', requestOptions)
                   .then(response => {
                     response.json()
                   console.log('res',response);

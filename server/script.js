@@ -9,7 +9,7 @@ const eventRoute = require('./routes/event');
 const passport = require('passport');
 const store = new session.MemoryStore();
 const cors  = require('cors');
-
+require('dotenv').config()
 const app = express();
 // app.use(session({
 //     secret: 'some secret',
@@ -18,8 +18,10 @@ const app = express();
 //     store
 // }));
 app.use(express.json());
+console.log(process.env.CORS_URL);
 app.use(cors({
-    origin: ["http://localhost:3000"],
+    
+    origin: [process.env.CORS_URL],
     methods: ["GET","POST"],
     credentials: true
 }));
@@ -31,9 +33,11 @@ app.use(express.urlencoded({
 
 db.connect(function (err) {
     if(err){
-        console.log("error");
+        console.log(err);
+        process.exit(1);
     }else{
         console.log("connected to MySQL");
+    
     }
 });
 app.use(session({
@@ -56,7 +60,7 @@ app.use('/users',usersRoute);
 app.use('/auth',authRoute);
 app.use('/event',eventRoute);
 
-require('dotenv').config()
+
 app.listen(3001,() => {
     console.log("running server on 3001");
 });
