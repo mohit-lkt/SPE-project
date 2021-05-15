@@ -1,1 +1,1 @@
-localhost ansible_user=mohit ansible_python_interpreter=/usr/bin/python
+192.168.1.73 ansible_sudo_pass='Dontdare2@' ansible_ssh_user=mohit ansible_python_interpreter=/usr/bin/python
