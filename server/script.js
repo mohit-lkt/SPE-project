@@ -7,6 +7,7 @@ const usersRoute = require('./routes/users');
 const authRoute = require('./routes/auth');
 const eventRoute = require('./routes/event');
 const passport = require('passport');
+const logger = require("./logger");
 const store = new session.MemoryStore();
 const cors  = require('cors');
 require('dotenv').config()
@@ -18,7 +19,7 @@ const app = express();
 //     store
 // }));
 app.use(express.json());
-console.log(process.env.CORS_URL);
+
 app.use(cors({
     
     origin: [process.env.CORS_URL],
@@ -50,6 +51,7 @@ app.use(session({
     },
 }));
 app.use((req,res,next)=>{
+    logger.info(req.body);
     console.log(store);
     console.log(`${req.method} - ${req.url}`);
     next();
