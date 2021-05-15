@@ -1,0 +1,9 @@
+---
+- name: Pull docker image
+  hosts: all
+  tasks:
+    - name: Pull docker image from docker hub
+      docker_image:
+        name: mohit24lkt/fitnessfuel:v2
+        name: mohit24lkt/fitnessfuel-client:v2
+        source: pull
