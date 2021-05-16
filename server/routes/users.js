@@ -2,6 +2,7 @@ const {Router} = require('express');
 const db = require('../database');
 const bcrypt  = require('bcrypt');
 const saltRounds = 10;
+const logger = require("../logger")
 
 
 const router = Router();
@@ -38,8 +39,10 @@ router.post('/',async (req,res)=>{
             const newuserID = temp[0][0].userID+1;
             await db.promise().query(`INSERT INTO users values('${newuserID}','${username}','${hash}','${email}')`);
             res.status(201).send({msg: 'Created User'});
+            logger.log("info","user registered successfully")
         }catch(err){
             console.log(err);
+            logger.log("error",err)
         }
         
     }

@@ -11,6 +11,7 @@ const logger = require("./logger");
 const store = new session.MemoryStore();
 const cors  = require('cors');
 require('dotenv').config()
+const port = process.env.SERVER_PORT;
 const app = express();
 // app.use(session({
 //     secret: 'some secret',
@@ -51,7 +52,7 @@ app.use(session({
     },
 }));
 app.use((req,res,next)=>{
-    logger.info(req.body);
+    //logger.info(req.body);
     console.log(store);
     console.log(`${req.method} - ${req.url}`);
     next();
@@ -63,8 +64,9 @@ app.use('/auth',authRoute);
 app.use('/event',eventRoute);
 
 
-app.listen(3001,() => {
+app.listen(port,() => {
     console.log("running server on 3001");
+    logger.log("info",`Server is running on port : ${port}`);
 });
 
 module.exports = app;

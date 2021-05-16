@@ -1,10 +1,25 @@
-{"message":{"username":"mukul","password":"mukul"},"level":"info","timestamp":"2021-05-15T13:24:51.834Z"}
-{"message":{"username":"mukul","password":"mukul"},"level":"info","timestamp":"2021-05-15T13:33:12.299Z"}
-{"message":{"username":"mukul","password":"mukul"},"level":"info","timestamp":"2021-05-15T13:34:12.199Z"}
-{"message":{"username":"mukul","password":"mukul"},"level":"info","timestamp":"2021-05-15T13:34:32.616Z"}
-{"message":{"username":"mukul","password":"mukul"},"level":"info","timestamp":"2021-05-15T13:36:59.848Z"}
-{"message":{"username":"google","password":"youtube"},"level":"info","timestamp":"2021-05-15T13:40:02.740Z"}
-{"message":{},"level":"info","timestamp":"2021-05-15T13:48:07.095Z"}
-{"message":{"userID":7,"username":"google","password":"youtube","email":"google@gmail.com"},"level":"info","timestamp":"2021-05-15T13:48:07.130Z"}
-{"message":{},"level":"info","timestamp":"2021-05-15T13:48:33.965Z"}
-{"message":{"userID":7,"username":"google","password":"youtube","email":"google@gmail.com"},"level":"info","timestamp":"2021-05-15T13:48:33.994Z"}
+info: Server is running on port : 3001 {"timestamp":"2021-05-16T03:21:38.277Z"}
+info: login successful {"timestamp":"2021-05-16T03:21:51.292Z"}
+info: login successful {"timestamp":"2021-05-16T03:21:58.629Z"}
+info: login successful {"timestamp":"2021-05-16T03:22:01.706Z"}
+info: login successful {"timestamp":"2021-05-16T03:22:02.897Z"}
+info: user logged in {"timestamp":"2021-05-16T03:22:07.192Z"}
+info: invalid username / password {"timestamp":"2021-05-16T03:22:55.619Z"}
+info: invalid username / password {"timestamp":"2021-05-16T03:23:06.253Z"}
+info: login successful {"timestamp":"2021-05-16T03:23:15.170Z"}
+info: invalid username / password {"timestamp":"2021-05-16T03:23:40.827Z"}
+info: user registered successfully {"timestamp":"2021-05-16T03:24:16.140Z"}
+info: login successful {"timestamp":"2021-05-16T03:24:30.847Z"}
+info: login successful {"timestamp":"2021-05-16T03:24:33.298Z"}
+info: Server is running on port : 3001 {"timestamp":"2021-05-16T03:25:10.577Z"}
+info: Server is running on port : 3001 {"timestamp":"2021-05-16T03:25:17.697Z"}
+info: login successful {"timestamp":"2021-05-16T03:25:32.143Z"}
+info: login successful {"timestamp":"2021-05-16T03:25:38.396Z"}
+info: invalid username / password {"timestamp":"2021-05-16T03:25:47.877Z"}
+info: invalid username / password {"timestamp":"2021-05-16T03:25:51.408Z"}
+info: login successful {"timestamp":"2021-05-16T03:25:55.624Z"}
+info: Server is running on port : 3001 {"timestamp":"2021-05-16T03:33:14.400Z"}
+info: user registered successfully {"timestamp":"2021-05-16T03:33:48.416Z"}
+info: user registered successfully {"timestamp":"2021-05-16T03:34:27.606Z"}
+info: user registered successfully {"timestamp":"2021-05-16T03:34:57.979Z"}
+info: user registered successfully {"timestamp":"2021-05-16T03:35:11.506Z"}
