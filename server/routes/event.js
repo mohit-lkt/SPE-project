@@ -1,6 +1,6 @@
 const {Router} = require('express');
 const db = require('../database');
-
+const logger = require("../logger")
 
 const router = Router();
 router.use((req,res,next)=>{
@@ -9,8 +9,8 @@ router.use((req,res,next)=>{
 });
 
 router.get('/',async (req,res)=>{
-    if(req.user){
-        console.log(req.user);
+    if(req.session.user){
+        console.log(req.session.user);
         const results = await db.promise().query(`SELECT * FROM event`);
         res.status(200).send(results[0]);
     }else{
@@ -29,10 +29,14 @@ router.post('/',async (req,res)=>{
         try{
             const temp = await db.promise().query(`SELECT userID FROM event ORDER BY userID DESC LIMIT 1`);
             const newuserID = temp[0][0].userID+1;
-            await db.promise().query(`INSERT INTO users values('${newuserID}','${summary}','${location}','${description}','${startDate}','${startTime}','${endDate}','${endTime}')`);
-            res.status(201).send({msg: 'Created Event'});
+            await db.promise().query(`INSERT INTO event values('${newuserID}','${summary}','${location}','${description}','${startDate}','${startTime}','${endDate}','${endTime}')`);
+            res.status(200).send({msg: 'Created Event'});
+            logger.log("info","Created Event Successfully! Go Get healthy now");
+            console.log("Success");
         }catch(err){
+            logger.log("info","Error creating event");
             console.log(err);
+
         }
         
     }

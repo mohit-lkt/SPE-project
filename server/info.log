@@ -23,3 +23,17 @@ info: user registered successfully {"timestamp":"2021-05-16T03:33:48.416Z"}
 info: user registered successfully {"timestamp":"2021-05-16T03:34:27.606Z"}
 info: user registered successfully {"timestamp":"2021-05-16T03:34:57.979Z"}
 info: user registered successfully {"timestamp":"2021-05-16T03:35:11.506Z"}
+info: invalid username / password {"timestamp":"2021-05-16T10:47:56.178Z"}
+info: invalid username / password {"timestamp":"2021-05-16T10:49:42.763Z"}
+info: Server is running on port : 3001 {"timestamp":"2021-05-16T10:53:30.736Z"}
+info: invalid username / password {"timestamp":"2021-05-16T10:53:30.845Z"}
+info: Server is running on port : 3001 {"timestamp":"2021-05-16T10:54:42.714Z"}
+info: login successful {"timestamp":"2021-05-16T10:54:42.888Z"}
+info: Server is running on port : 3001 {"timestamp":"2021-05-16T10:56:07.139Z"}
+info: Server is running on port : 3001 {"timestamp":"2021-05-16T13:19:44.011Z"}
+info: Server is running on port : 3001 {"timestamp":"2021-05-16T13:28:43.792Z"}
+info: Server is running on port : 3001 {"timestamp":"2021-05-16T13:29:21.754Z"}
+info: Server is running on port : 3001 {"timestamp":"2021-05-16T13:42:19.384Z"}
+info: Server is running on port : 3001 {"timestamp":"2021-05-16T13:48:16.284Z"}
+info: Server is running on port : 3001 {"timestamp":"2021-05-16T13:53:50.929Z"}
+info: Created Event Successfully! Go Get healthy now {"timestamp":"2021-05-16T13:55:35.386Z"}

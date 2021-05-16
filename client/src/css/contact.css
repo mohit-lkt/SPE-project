@@ -150,7 +150,13 @@ text-align: center;
     cursor: pointer;
     padding: 10px;
     font: 18px;
+    margin-left: 8em;
 }
+.flexbox-container {
+    display: flex;
+    flex-direction: row;
+}
+
 @media (max-width: 991px)
 {
     .contact

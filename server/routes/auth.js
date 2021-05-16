@@ -37,8 +37,9 @@ router.post('/login',async (req,res)=>{
                 req.session.user = result[0];
                 console.log(req.session.user[0]);
                 console.log("success");
-                logger.log("info","login successful");
                 res.send({data:req.session.user[0],message: "OK" , statusType:"success"});
+                logger.log("info","login successful");
+                
                 
             }else{
                 console.log("failed!!")

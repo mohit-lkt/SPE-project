@@ -26,10 +26,10 @@ describe('/GET users', () => {
 describe('/POST user', () => {
     it('it should post the user info', (done) => {
         const user = {
-            userID: 7,
-            username: "google",
-            password: "youtube",
-            email: "google@gmail.com"
+            userID: 1,
+            username: "mihir",
+            password: "mihir",
+            email: "mihir@gmail.com"
         };
 
         chai.request(app)
