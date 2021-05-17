@@ -23,6 +23,7 @@ describe('/GET users', () => {
     });
 });
 
+
 describe('/POST user', () => {
     it('it should post the user info', (done) => {
         const user = {

@@ -23,8 +23,7 @@ function Contact() {
     const [descriptionR,setDescriptionR] = useState("");
     const [startDateR,setStartDateR] = useState("");
     const [startTimeR,setStartTimeR] = useState("");
-    const [endDateR,setEndDateR] = useState("");
-    const [endTimeR,setEndTimeR] = useState("");
+    
     const [error,setError] = useState("");
     const history = useHistory()
     
@@ -109,11 +108,14 @@ function Contact() {
                 ]
               }
             }
-            // event.summary = summaryR;
+            if(summaryR!==""){event.summary = summaryR;}
+            if(locationR!==""){event.location = locationR;}
+            if(descriptionR!==""){event.description=descriptionR;}
+
             // event.location = locationR;
             // event.description = descriptionR;
-            event.start.dateTime = "2021-05-17T09:00:00-07:00";
-            event.end.dateTime = "2021-05-18T17:00:00-07:00";
+            //event.start.dateTime = "2021-05-18T09:00:00+05:30";
+            //event.end.dateTime = "2021-05-19T17:00:00-07:00";
             //event.start.dateTime = startDateR+"T"+startTimeR+"-07:00";
             // console.log(summaryR);
             // console.log(locationR);
@@ -127,9 +129,9 @@ function Contact() {
             // event.location = locationR;
             // event.description = descriptionR;
             
-            // event.start.dateTime = startDateR+"T"+startTimeR+"-07:00";
+            //event.start.dateTime = startDateR+"T"+startTimeR+"-07:00";
             // console.log(event.start.dateTime);
-            // event.end.dateTime = endDateR+"T"+endTimeR+"-07:00";
+             //event.end.dateTime = '2021-05-18T17:00:00-07:00';
             // }
             
             var request = gapi.client.calendar.events.insert({
@@ -239,26 +241,15 @@ function Contact() {
                     <input type="text" name="" required="required" onChange={(e)=> {
                     setError('')
                     setStartDateR(e.target.value)}}/>
-                     <span>Start Date(yyyy-mm-dd)</span>
+                     <span>Date(yyyy-mm-dd)</span>
                    </div>
                    <div className="inputBox">
                     <input type="text" name="" required="required" onChange={(e)=> {
                     setError('')
                     setStartTimeR(e.target.value)}}/>
-                     <span>Start Time(hh:mm:ss)</span>
+                     <span>Time(hh:mm:ss)</span>
                    </div>
-                   <div className="inputBox">
-                    <input type="text" name="" required="required" onChange={(e)=> {
-                    setError('')
-                    setEndDateR(e.target.value)}}/>
-                     <span>End Date(yyyy-mm-dd)</span>
-                   </div>
-                   <div className="inputBox">
-                    <input type="text" name="" required="required" onChange={(e)=> {
-                    setError('')
-                    setEndTimeR(e.target.value)}}/>
-                     <span>End Time(hh:mm:ss)</span>
-                   </div>
+                   
                    <div className="inputBox">
                     <input type="submit" name="" value="Register" onClick = {handleClick}/>
                    </div>
