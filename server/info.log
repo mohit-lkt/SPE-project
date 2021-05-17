@@ -37,3 +37,10 @@ info: Server is running on port : 3001 {"timestamp":"2021-05-16T13:42:19.384Z"}
 info: Server is running on port : 3001 {"timestamp":"2021-05-16T13:48:16.284Z"}
 info: Server is running on port : 3001 {"timestamp":"2021-05-16T13:53:50.929Z"}
 info: Created Event Successfully! Go Get healthy now {"timestamp":"2021-05-16T13:55:35.386Z"}
+info: Server is running on port : 3001 {"timestamp":"2021-05-17T02:39:30.872Z"}
+info: Error creating event {"timestamp":"2021-05-17T02:41:13.508Z"}
+info: Server is running on port : 3001 {"timestamp":"2021-05-17T02:42:04.957Z"}
+info: Created Event Successfully! Go Get healthy now {"timestamp":"2021-05-17T02:42:16.930Z"}
+info: Server is running on port : 3001 {"timestamp":"2021-05-17T02:57:08.415Z"}
+info: user registered successfully {"timestamp":"2021-05-17T02:59:33.669Z"}
+info: user registered successfully {"timestamp":"2021-05-17T03:04:21.772Z"}

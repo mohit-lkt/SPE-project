@@ -3,13 +3,7 @@ import React , { useState } from 'react'
 import { NavLink ,useHistory} from 'react-router-dom'
 import "../css/signup.css";
 require('dotenv').config()
-const baseurl = process.env.BASE_URL;
-
-
-
-
-
-
+const baseurl = process.env.REACT_APP_BASE_URL;
 function Signup() {
         const [ username, setUname ] = useState('')
         const [ email, setemail ] = useState('')
@@ -33,6 +27,9 @@ function Signup() {
                 fetch(baseurl+'/users', requestOptions)
                   .then(response => {
                     response.json()
+                    if(response.status===201){
+                        window.alert("Created Account");
+                    }
                   console.log('res',response);
                   history.push("/")
                   })

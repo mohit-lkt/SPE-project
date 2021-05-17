@@ -83,23 +83,23 @@ function Contact() {
           .then(() => {
             
             var event = {
-              'summary': 'Awesome Event!',
-              'location': '800 Howard St., San Francisco, CA 94103',
-              'description': 'Really great refreshments',
+              'summary': 'Yoga',
+              'location': 'Bangalore',
+              'description': 'Get Healthy',
               'start': {
                 'dateTime': '2021-05-17T09:00:00-07:00',
-                
+                'timeZone': 'America/Los_Angeles'
               },
               'end': {
                 'dateTime': '2021-05-18T17:00:00-07:00',
-                
+                'timeZone': 'America/Los_Angeles'
               },
               'recurrence': [
                 'RRULE:FREQ=DAILY;COUNT=1'
               ],
               'attendees': [
-                {'email': 'lpage@example.com'},
-                {'email': 'sbrin@example.com'}
+                {'email': 'ashish@example.com'},
+                {'email': 'mohit@example.com'}
               ],
               'reminders': {
                 'useDefault': false,
@@ -109,16 +109,28 @@ function Contact() {
                 ]
               }
             }
+            // event.summary = summaryR;
+            // event.location = locationR;
+            // event.description = descriptionR;
+            event.start.dateTime = "2021-05-17T09:00:00-07:00";
+            event.end.dateTime = "2021-05-18T17:00:00-07:00";
+            //event.start.dateTime = startDateR+"T"+startTimeR+"-07:00";
+            // console.log(summaryR);
+            // console.log(locationR);
+            // console.log(descriptionR);
+            // console.log(startDateR);
+            // console.log(startTimeR);
+            // console.log(endDateR);
+            // console.log(endTimeR);
+            // if(summaryR && locationR && descriptionR && startDateR && startTimeR && endDateR && endTimeR){
+            // event.summary = summaryR;
+            // event.location = locationR;
+            // event.description = descriptionR;
             
-            if(summaryR && locationR && descriptionR && startDateR && startTimeR && endDateR && endTimeR){
-            event.summary = summaryR;
-            event.location = locationR;
-            event.description = descriptionR;
-            
-            event.start.dateTime = startDateR+"T"+startTimeR+"-07:00";
-            console.log(event.start.dateTime);
-            event.end.dateTime = endDateR+"T"+endTimeR+"-07:00";
-            }
+            // event.start.dateTime = startDateR+"T"+startTimeR+"-07:00";
+            // console.log(event.start.dateTime);
+            // event.end.dateTime = endDateR+"T"+endTimeR+"-07:00";
+            // }
             
             var request = gapi.client.calendar.events.insert({
               'calendarId': 'primary',
@@ -249,7 +261,6 @@ function Contact() {
                    </div>
                    <div className="inputBox">
                     <input type="submit" name="" value="Register" onClick = {handleClick}/>
-                    
                    </div>
                    
                </form>

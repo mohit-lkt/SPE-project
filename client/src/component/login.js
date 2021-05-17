@@ -34,8 +34,6 @@ function Login() {
                     // throw new Error(body.error)
                     console.log('red',body);
                     setError(body.msg)
-                    
-                    
                   })
             }else{
                 window.alert("Loggen In");

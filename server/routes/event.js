@@ -27,6 +27,7 @@ router.post('/',async (req,res)=>{
         console.log(location);
         console.log(description);
         try{
+            
             const temp = await db.promise().query(`SELECT userID FROM event ORDER BY userID DESC LIMIT 1`);
             const newuserID = temp[0][0].userID+1;
             await db.promise().query(`INSERT INTO event values('${newuserID}','${summary}','${location}','${description}','${startDate}','${startTime}','${endDate}','${endTime}')`);
