@@ -11,6 +11,7 @@ const should = chai.should();
 chai.use(chaiHttp)
 
 
+
 describe('/GET users', () => {
     it('it should Get user', (done) => {
         chai.request(app)
@@ -19,7 +20,7 @@ describe('/GET users', () => {
             res.should.have.status(200);
             res.body.should.be.a('object');
             done();
-            
+
         });
     });
 });
